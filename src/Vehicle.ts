@@ -8,38 +8,38 @@
 
 class Vehicle {
   public color: string
-  private speed: number = 0
-  private maximumSpeed: number
-  private licensePlate: string
-  private cadence: number = 0
+  public speedCar: number = 0
+  private readonly maximumSpeed: number
 
   // constructor
-  public constructor(color: string, maxSpeed: number) {
+  public constructor (color: string, maxSpeed: number) {
     this.color = color
     this.maximumSpeed = maxSpeed
   }
 
   // getters
-  public status(): void {
-    console.log(` -> Speed: ${this.speed}`)
+  public status (): void {
+    console.log(` -> Speed: ${this.speedCar}`)
     console.log(` -> MaxSpeed: ${this.maximumSpeed}`)
     console.log(` -> Color: ${this.color}`)
+  }
+
+  public speed (): number {
+    return this.speedCar
   }
 
   // setters
 
   // method
-  public accelerate(
+  public accelerate (
     accelerationPower: number,
     accelerationTime: number
-  ): number {
-    this.speed = accelerationPower * accelerationTime + this.speed
-    return this.speed
+  ): void {
+    this.speedCar = accelerationPower * accelerationTime + this.speedCar
   }
 
-  public break(breakPower: number, breakTime: number): number {
-    this.speed = this.speed - breakPower * breakTime
-    return this.speed
+  public break (breakPower: number, breakTime: number): void {
+    this.speedCar = this.speedCar - breakPower * breakTime
   }
 }
 export = Vehicle

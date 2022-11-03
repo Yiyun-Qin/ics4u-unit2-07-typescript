@@ -6,48 +6,41 @@
  * Since:   2022-10-27
  */
 
-class Truck extends Vehicle {
-  private licensePlateNumber: string
-  private airPressure: number
-  public color: string
-  public maxSpeed: number
-  private speed: number = 0
-  public accelerationPower: number
-  public accelerationTime: number
-  public brakePower: number
-  public brakeTime: number
+import Vehicle from './Vehicle'
+
+export class Truck extends Vehicle {
+  private readonly licensePlateNumber: string
+  private speedTruck: number = 0
 
   // constructor
 
-  public constructor(color: string, maxSpeed: number, license: string) {
+  public constructor (color: string, maxSpeed: number, license: string) {
+    super(color, maxSpeed)
     this.licensePlateNumber = license
-    this.color = color
-    this.maxSpeed = maxSpeed
   }
 
   // getters
+  public status (): void {
+    super()
+    console.log(` -> License Plate: ${this.licensePlateNumber}`)
+  }
 
-  public status(): void {
-    super.status()
-    console.log(` -> License Plate: ${this.licensePlate}`)
+  public speed (): number {
+    this.speedTruck = super.speed()
+    return this.speedTruck
   }
 
   // method
 
-  public accelerate(accelerationPower: number, accelerationTime: number): void {
-    this.accelerationPower = accelerationPower
-    this.accelerationTime = accelerationTime
-    this.speed = super.accelerate
+  public accelerate (accelerationPower: number, accelerationTime: number): void {
+    super(accelerationPower, accelerationTime)
   }
 
-  public break(breakPower: number, breakTime: number): void {
-    this.breakPower = breakPower
-    this.breakTime = breakTime
-    this.speed = super.break
+  public break (breakPower: number, breakTime: number): void {
+    super(breakPower, breakTime)
   }
 
-  public Provide_Air(airPressure: number) {
-    this.speed = this.speed = airPressure / 2
+  public applyAir (airPressure: number): void {
+    this.speedTruck = this.speedTruck - airPressure / 2
   }
 }
-export = Truck

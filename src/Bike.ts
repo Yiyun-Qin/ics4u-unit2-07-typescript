@@ -6,7 +6,9 @@
  * Since:   2022-10-27
  */
 
-class Bike extends Vehicle {
+import Vehicle from './Vehicle'
+
+export class Bike extends Vehicle {
   public cadense: number = 0
 
   // constructor
@@ -16,7 +18,7 @@ class Bike extends Vehicle {
 
   // setters
   public status (): void {
-    super.status()
+    super()
     console.log(` -> Cadense: ${this.cadense}`)
   }
 
@@ -27,4 +29,3 @@ class Bike extends Vehicle {
     this.cademse = this.cadense + appliedPower
   }
 }
-export = Bike

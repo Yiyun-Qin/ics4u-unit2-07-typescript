@@ -31,14 +31,14 @@ bigTruck.status()
 
 console.log('\nAccelerating, 10 of power for ten seconds:')
 bigTruck.accelerate(10, 10)
-console.log('New speed: ' + bigTruck.speed)
+console.log(`New speed: ${bigTruck.speed()}`)
 
 console.log('\nBreaking, 10 of power for 10 sec.')
 bigTruck.accelerate(10, 10)
-console.log('New speed: ' + bigTruck.speed)
+console.log(`New speed: ${bigTruck.speed()}`)
 
 console.log('\nApplyed air pressure of 10:')
 bigTruck.applyAir(10)
-console.log('New speed: ' + bigTruck.speed)
+console.log(`New speed: ${bigTruck.speed()}`)
 
 console.log('\nDone.')
