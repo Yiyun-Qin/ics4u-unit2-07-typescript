@@ -1,4 +1,5 @@
 /*
+ *
  * This program is a vehicle class.
  *
  * @author  Mr Coxall
@@ -22,7 +23,8 @@ console.log('\nAccelerate by 15:')
 bmx.accelerate(15)
 bmx.status()
 
-console.log('\nRing bell.')
+console.log('\nRinging bell.')
+bmx.Ring_Bell()
 
 const bigTruck = new Truck('Grey', 200, 'HGC-3456F')
 
@@ -31,14 +33,14 @@ bigTruck.status()
 
 console.log('\nAccelerating, 10 of power for ten seconds:')
 bigTruck.accelerate(10, 10)
-console.log(`New speed: ${bigTruck.speed()}`)
+console.log('New speed: ' + String(bigTruck.speed()))
 
 console.log('\nBreaking, 10 of power for 10 sec.')
 bigTruck.accelerate(10, 10)
-console.log(`New speed: ${bigTruck.speed()}`)
+console.log('New speed: ' + String(bigTruck.speed()))
 
 console.log('\nApplyed air pressure of 10:')
 bigTruck.applyAir(10)
-console.log(`New speed: ${bigTruck.speed()}`)
+console.log('New speed: ' + String(bigTruck.speed()))
 
 console.log('\nDone.')

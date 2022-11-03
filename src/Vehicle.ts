@@ -8,7 +8,7 @@
 
 class Vehicle {
   public color: string
-  public speedCar: number = 0
+  protected speedCar: number = 0
   private readonly maximumSpeed: number
 
   // constructor

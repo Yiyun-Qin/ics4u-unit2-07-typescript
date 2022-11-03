@@ -16,16 +16,23 @@ export class Bike extends Vehicle {
     super(color, maxSpeed)
   }
 
+  // getters
+
   // setters
+
   public status (): void {
-    super()
+    super.status()
+    this.speedCar = this.cadense * 2
     console.log(` -> Cadense: ${this.cadense}`)
   }
 
-  // setters
+  public Ring_Bell (): void {
+    console.log("Ding ding!\n")
+  }
 
   // method
   public accelerate (appliedPower: number): void {
-    this.cademse = this.cadense + appliedPower
+    this.cadense = this.cadense + appliedPower
+    this.speedCar = this.cadense * 2
   }
 }

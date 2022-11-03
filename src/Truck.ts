@@ -10,7 +10,6 @@ import Vehicle from './Vehicle'
 
 export class Truck extends Vehicle {
   private readonly licensePlateNumber: string
-  private speedTruck: number = 0
 
   // constructor
 
@@ -21,26 +20,13 @@ export class Truck extends Vehicle {
 
   // getters
   public status (): void {
-    super()
+    super.status()
     console.log(` -> License Plate: ${this.licensePlateNumber}`)
-  }
-
-  public speed (): number {
-    this.speedTruck = super.speed()
-    return this.speedTruck
   }
 
   // method
 
-  public accelerate (accelerationPower: number, accelerationTime: number): void {
-    super(accelerationPower, accelerationTime)
-  }
-
-  public break (breakPower: number, breakTime: number): void {
-    super(breakPower, breakTime)
-  }
-
   public applyAir (airPressure: number): void {
-    this.speedTruck = this.speedTruck - airPressure / 2
+    this.speedCar = this.speedCar - airPressure / 2
   }
 }
