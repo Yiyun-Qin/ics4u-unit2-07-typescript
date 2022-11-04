@@ -21,8 +21,8 @@ export class Bike extends Vehicle {
   // setters
 
   public status (): void {
-    super.status()
     this.speedCar = this.cadense * 2
+    super.status()
     console.log(` -> Cadense: ${this.cadense}`)
   }
 
