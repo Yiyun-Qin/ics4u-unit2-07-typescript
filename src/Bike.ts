@@ -27,7 +27,7 @@ export class Bike extends Vehicle {
   }
 
   public Ring_Bell (): void {
-    console.log("Ding ding!\n")
+    console.log('Ding ding!\n')
   }
 
   // method
